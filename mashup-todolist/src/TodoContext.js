@@ -3,24 +3,9 @@ import React, {useReducer, createContext, useContext, useRef} from 'react';
 const initialTodos = [
     {
         id: 1,
-        text: '프로젝트 생성하기',
+        text: '예제) 쓰레기통을 클릭해 삭제해 주세요',
         done: false,
     },
-    {
-        id: 2,
-        text: '컴포넌트 스타일링하기',
-        done: false,
-    },
-    {
-        id: 3,
-        text: 'Context 만들기',
-        done: false,
-    },
-    {
-        id: 4,
-        text: '기능 구현하기',
-        done: true,
-    },   
 ];
 
 /*
@@ -49,7 +34,7 @@ const TodoNextIdContext = createContext();
 
 export function TodoProvider({children}){
     const [state, dispath] = useReducer(todoReducer, initialTodos);
-    const nextId = useRef(5);
+    const nextId = useRef(2);
 
     return (
         <TodoStateContext.Provider value={state}>
